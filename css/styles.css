@@ -455,4 +455,350 @@ img {
     fill: #f4f4fd;
 }
 
+/* FOOTER SUBSCRIBE */
+
+.footer-title {
+    margin-bottom: 16px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #ffffff;
+}
+
+.footer-form {
+    display: flex;
+    gap: 24px;
+}
+
+/* INPUT */
+
+.footer-input {
+    width: 264px;
+    height: 40px;
+    padding-left: 16px;
+
+    background-color: transparent;
+    border: 1px solid #ffffff;
+    border-radius: 4px;
+
+    font-size: 12px;
+    line-height: 1.5;
+    color: #ffffff;
+
+    outline: transparent;
+}
+
+.footer-input::placeholder {
+    color: #ffffff;
+}
+.footer-input {
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-input:hover,
+.footer-input:focus {
+    border-color: #31D0AA;
+}
+/* BUTTON */
+
+.footer-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+
+    min-width: 165px;
+    height: 40px;
+
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+
+    color: #ffffff;
+    background-color: #4d5ae5;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-btn:hover,
+.footer-btn:focus {
+    background-color: #31d0aa;
+}
+
+.footer-btn-icon {
+    fill: #ffffff;
+}
+
 /* endregion footer */
+
+/* ========== REGION POPUP ========== */
+/* ========== BACKDROP ========== */
+.backdrop {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(46, 47, 66, 0.4);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+/* ========== MODAL ========== */
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    width: 408px;
+    min-height: 584px;
+    padding: 72px 24px 24px;
+    background-color: #fcfcfc;
+    border-radius: 4px;
+    box-shadow:
+        0 1px 1px rgba(0, 0, 0, 0.14),
+        0 1px 3px rgba(0, 0, 0, 0.12),
+        0 2px 1px rgba(0, 0, 0, 0.2);
+
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop:not(.is-open) .modal {
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+/* ========== CLOSE BUTTON ========== */
+.modal-close-btn {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+
+    width: 24px;
+    height: 24px;
+    padding: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #e7e9fc;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    cursor: pointer;
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-close-btn:hover,
+.modal-close-btn:focus {
+    background-color: #404bbf;
+}
+
+.modal-close-btn:hover svg,
+.modal-close-btn:focus svg {
+    fill: #ffffff;
+}
+
+/* ========== TITLE ========== */
+.modal-title {
+    margin-bottom: 16px;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+
+    color: #2e2f42;
+}
+
+/* ========== FORM ========== */
+.form-field {
+    margin-bottom: 8px;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 4px;
+
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+
+    color: #8e8f99;
+}
+
+/* ========== INPUT ICON ========== */
+.input-wrapper {
+    position: relative;
+}
+
+.form-input {
+    width: 100%;
+    height: 40px;
+    padding-left: 38px;
+
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 4px;
+    outline: transparent;
+
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-icon {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    fill: #2e2f42;
+
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* FOCUS STATE (ключ HW5) */
+.form-input:focus {
+    border-color: #4d5ae5;
+}
+
+.form-input:focus+.form-icon {
+    fill: #4d5ae5;
+}
+
+/* ========== TEXTAREA ========== */
+.form-textarea {
+    width: 100%;
+    height: 120px;
+    padding: 8px 16px;
+
+    resize: none;
+
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 4px;
+    outline: transparent;
+
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-textarea:focus {
+    border-color: #4d5ae5;
+}
+
+.checkbox-label {
+    position: relative;
+    /* 🔑 ОБЯЗАТЕЛЬНО */
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: #8e8f99;
+}
+
+.checkbox-input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(100%);
+    overflow: hidden;
+}
+
+.checkbox-custom {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 2px;
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.privacy-link {
+    color: #4d5ae5;
+    text-decoration: underline;
+}
+
+.privacy-link:hover,
+.privacy-link:focus {
+    color: #404bbf;
+}
+
+.form-checkbox {
+    margin-top: 16px;
+}
+
+.checkbox-icon {
+    opacity: 0;
+    fill: #fff;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.checkbox-input:checked+.checkbox-label .checkbox-custom {
+    background-color: #4d5ae5;
+    border-color: #4d5ae5;
+}
+
+.checkbox-input:checked+.checkbox-label .checkbox-icon {
+    opacity: 1;
+}
+
+.checkbox-input:focus-visible+.checkbox-label .checkbox-custom {
+    outline: 2px solid #4d5ae5;
+    outline-offset: 2px;
+}
+
+.modal-form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* ========== SUBMIT BUTTON ========== */
+.modal-submit-btn {
+    display: block;
+    margin: 24px auto 0;
+
+    width: 169px;
+    height: 56px;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+
+    color: #ffffff;
+    background-color: #4d5ae5;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-submit-btn:hover,
+.modal-submit-btn:focus {
+    background-color: #404bbf;
+}
+/* ========== END REGION POPUP ========== */
