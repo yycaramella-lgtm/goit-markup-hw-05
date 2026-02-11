@@ -482,17 +482,17 @@ img {
     border-radius: 4px;
 
     font-size: 12px;
-    line-height: 1.5;
+    line-height: 2;
+    letter-spacing: 0.04em;
     color: #ffffff;
 
     outline: transparent;
+
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-input::placeholder {
     color: #ffffff;
-}
-.footer-input {
-    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-input:hover,
@@ -514,6 +514,7 @@ img {
     font-size: 16px;
     font-weight: 500;
     line-height: 1.5;
+    letter-spacing: 0.04em;
 
     color: #ffffff;
     background-color: #4d5ae5;
@@ -756,8 +757,8 @@ img {
 }
 
 .checkbox-input:checked+.checkbox-label .checkbox-custom {
-    background-color: #4d5ae5;
-    border-color: #4d5ae5;
+    background-color: #404bbf;
+    border-color: #404bbf;
 }
 
 .checkbox-input:checked+.checkbox-label .checkbox-icon {
@@ -785,6 +786,7 @@ img {
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
+    letter-spacing: 0.04em;
 
     color: #ffffff;
     background-color: #4d5ae5;
